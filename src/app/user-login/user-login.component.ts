@@ -24,7 +24,7 @@ export class UserLoginComponent implements OnInit {
   submit():void{
     console.log(this.form.getRawValue())
     const headers = { 'content-type': 'text/plain'}  
-    this.http.post("http://localhost:8080/login", this.form.getRawValue(), {'headers':headers, withCredentials: true}).subscribe(
+    this.http.post("http://35.172.27.182:8080/login", this.form.getRawValue(), {'headers':headers, withCredentials: true}).subscribe(
         () => this.router.navigate(["/"])
     );
   }

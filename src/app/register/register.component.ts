@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
 
   submit():void {
     console.log(this.form.getRawValue());
-    this.http.post('http://localhost:8080/users/create', this.form.getRawValue()).subscribe(() =>{
+    this.http.post('http://35.172.27.182:8080/users/create', this.form.getRawValue()).subscribe(() =>{
       this.router.navigate(["login"]);
     });
   }
